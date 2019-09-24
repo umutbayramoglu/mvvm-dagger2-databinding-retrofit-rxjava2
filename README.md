@@ -28,7 +28,7 @@ It utilizes trending libraries such as Dagger2, Retrofit, RxJava2, Databinding, 
 3. **ui**: activity, fragment classes and their corresponding viewmodels.
 4. **utils**: utility classes.
 
-#### Libraries and their functions:
+#### Libraries:
 * [Retrofit](https://square.github.io/retrofit/) handles API integration.
 * [RxJava2](https://github.com/ReactiveX/RxJava) for implementing observable pattern.
 * [Dagger 2](https://google.github.io/dagger/) provides dependency injection.
