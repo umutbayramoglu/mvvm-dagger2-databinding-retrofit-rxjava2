@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="book"
+            type="com.ueb.samplemvvm.model.Results.Book" />
+
+    </data>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bookdetail.BookDetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/baloo"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:textSize="25dp"
+                android:text="@{book.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <ImageView
+                app:imageUrl="@{book.ımage}"
+                android:layout_width="150dp"
+                android:layout_height="276dp"></ImageView>
+
+            <LinearLayout
+                android:paddingBottom="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:fontFamily="@font/mclaren"
+                        android:text="@{book.description}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/mclaren"
+                        android:text="Author:   "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/mclaren"
+                        android:text="@{book.author}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/mclaren"
+                        android:text="Publisher:   "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/mclaren"
+                        android:text="@{book.publisher}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/mclaren"
+                        android:text="Price:   "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/mclaren"
+                        android:text="@{book.price}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
+</layout>

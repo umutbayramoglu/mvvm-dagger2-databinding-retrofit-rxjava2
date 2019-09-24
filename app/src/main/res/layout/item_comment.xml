@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="comment"
+            type="com.ueb.samplemvvm.model.Comment" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/commentLayout"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:padding="5dp"
+                android:id="@+id/commentSender"
+                android:text="@{comment.name}"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+
+                android:paddingTop="10dp"
+                android:paddingHorizontal="5dp"
+                android:id="@+id/commentBody"
+                android:text="@{comment.body}"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

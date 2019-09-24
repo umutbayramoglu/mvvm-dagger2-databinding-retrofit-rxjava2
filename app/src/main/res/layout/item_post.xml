@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/postLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/image"
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/book1"
+                            app:imageUrl="@{book.image}"></ImageView>
+
+                        <LinearLayout
+                            android:layout_marginRight="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:fontFamily="@font/baloo"
+                                android:id="@+id/postTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="@{book.name}"
+                                android:textColor="@android:color/black"
+                                android:textSize="18dp"></TextView>
+
+                            <TextView
+                                android:fontFamily="@font/mclaren"
+                                android:id="@+id/postBody"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{book.description}"
+                                android:textSize="15dp"></TextView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/seperator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="7dp"
+                        android:background="@drawable/seperator"></View>
+
+                    <LinearLayout
+                        android:layout_below="@id/seperator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:paddingHorizontal="10dp">
+
+                        <TextView
+                            android:fontFamily="@font/mclaren"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{StringUtil.authorText(book.author)}"
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_bg_2"
+                android:gravity="center"
+                android:text="@{book.rank}"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+        </RelativeLayout>
+
+        >
+    </RelativeLayout>
+
+
+    <data>
+
+        <import type="com.ueb.samplemvvm.util.StringUtil"></import>
+
+        <variable
+            name="book"
+            type="com.ueb.samplemvvm.model.Results.Book" />
+    </data>
+
+</layout>
